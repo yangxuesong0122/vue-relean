@@ -1,8 +1,7 @@
 <template>
-	<div>
-		<h2>学校名称：{{name | mySlice}}</h2>
+	<div class="demo">
+		<h2 class="title">学校名称：{{name}}</h2>
 		<h2>学校地址：{{address}}</h2>
-		<button @click="test">点我测试一个hello方法</button>
 	</div>
 </template>
 
@@ -11,14 +10,15 @@
 		name:'School',
 		data() {
 			return {
-				name: '河津中学',
-				address: '河津'
-			}
-		},
-		methods: {
-			test() {
-				this.hello()
+				name: 'yxs',
+				address: 'xian'
 			}
 		}
 	}
 </script>
+
+<style lang="less" scoped>
+	.demo {
+		background-color: skyblue;
+	}
+</style>
