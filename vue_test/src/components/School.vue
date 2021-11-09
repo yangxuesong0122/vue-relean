@@ -7,11 +7,11 @@
 
 <script>
 	export default {
-		name:'School',
+		name: 'School',
 		data() {
 			return {
-				name:'尚硅谷',
-				address:'北京·昌平'
+				name: '河津中学',
+				address: '河津'
 			}
 		},
 	}
