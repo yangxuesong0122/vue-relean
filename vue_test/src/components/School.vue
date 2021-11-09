@@ -1,30 +1,24 @@
 <template>
-	<div class="demo">
+	<div class="school">
 		<h2>学校名称：{{name}}</h2>
 		<h2>学校地址：{{address}}</h2>
-		<button @click="showName">点我提示学校名</button>	
 	</div>
 </template>
 
 <script>
-	 export default {
-		name: 'School',
+	export default {
+		name:'School',
 		data() {
 			return {
-				name: '河津中学',
-				address: '河津'
-			}
-		},
-		methods: {
-			showName() {
-				alert(this.name)
+				name:'尚硅谷',
+				address:'北京·昌平'
 			}
 		},
 	}
 </script>
 
 <style>
-	.demo {
-		background-color: orange;
+	.school{
+		background-color: gray;
 	}
 </style>
