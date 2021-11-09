@@ -11,7 +11,7 @@
 	import Student from './components/Student'
 
 	export default {
-		name: 'App',
-		components: {School, Student}
+		name:'App',
+		components:{School,Student}
 	}
 </script>
