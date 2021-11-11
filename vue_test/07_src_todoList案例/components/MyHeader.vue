@@ -5,7 +5,7 @@
 </template>
 
 <script>
-	import { nanoid } from 'nanoid'
+	import {nanoid} from 'nanoid'
 	export default {
 		name: 'MyHeader',
 		//接收从App传递过来的addTodo
