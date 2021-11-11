@@ -12,9 +12,9 @@
 
 <script>
 	export default {
-		name: 'MyItem',
+		name:'MyItem',
 		//声明接收todo、checkTodo、deleteTodo
-		props:['todo', 'checkTodo', 'deleteTodo'],
+		props:['todo','checkTodo','deleteTodo'],
 		methods: {
 			//勾选or取消勾选
 			handleCheck(id) {
