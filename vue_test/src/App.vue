@@ -18,7 +18,7 @@
 
 	export default {
 		name: 'App',
-		components:{ MyHeader, MyList, MyFooter },
+		components: {MyHeader, MyList, MyFooter},
 		data() {
 			return {
 				//由于todos是MyHeader组件和MyFooter组件都在使用，所以放在App中（状态提升）
@@ -32,8 +32,14 @@
 			},
 			//勾选or取消勾选一个todo
 			checkTodo(id) {
-				this.todos.forEach((todo)=>{
+				this.todos.forEach((todo) => {
 					if(todo.id === id) todo.done = !todo.done
+				})
+			},
+			//更新一个todo
+			updateTodo(id, title) {
+				this.todos.forEach((todo) => {
+					if(todo.id === id) todo.title = title
 				})
 			},
 			//删除一个todo
@@ -56,17 +62,19 @@
 		watch: {
 			todos: {
 				deep: true,
-				handler(value){
+				handler(value) {
 					localStorage.setItem('todos', JSON.stringify(value))
 				}
 			}
 		},
 		mounted() {
-			this.$bus.$on('checkTodo',this.checkTodo)
+			this.$bus.$on('checkTodo', this.checkTodo)
+			this.$bus.$on('updateTodo', this.updateTodo)
 			this.pubId = pubsub.subscribe('deleteTodo', this.deleteTodo)
 		},
 		beforeDestroy() {
 			this.$bus.$off('checkTodo')
+			this.$bus.$off('updateTodo')
 			pubsub.unsubscribe(this.pubId)
 		},
 	}
@@ -93,6 +101,12 @@
 		color: #fff;
 		background-color: #da4f49;
 		border: 1px solid #bd362f;
+	}
+	.btn-edit {
+		color: #fff;
+		background-color: skyblue;
+		border: 1px solid rgb(103, 159, 180);
+		margin-right: 5px;
 	}
 	.btn-danger:hover {
 		color: #fff;
