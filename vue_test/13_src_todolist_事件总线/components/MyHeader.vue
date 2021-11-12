@@ -5,13 +5,13 @@
 </template>
 
 <script>
-	import {nanoid} from 'nanoid'
+	import { nanoid } from 'nanoid'
 	export default {
 		name: 'MyHeader',
 		data() {
 			return {
 				//收集用户输入的title
-				title: ''
+				title:''
 			}
 		},
 		methods: {
