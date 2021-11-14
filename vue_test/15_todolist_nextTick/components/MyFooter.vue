@@ -13,27 +13,27 @@
 
 <script>
 	export default {
-		name:'MyFooter',
-		props:['todos'],
+		name: 'MyFooter',
+		props: ['todos'],
 		computed: {
 			//总数
-			total(){
+			total() {
 				return this.todos.length
 			},
 			//已完成数
-			doneTotal() {
+			doneTotal(){
 				//此处使用reduce方法做条件统计
 				/* const x = this.todos.reduce((pre,current)=>{
 					console.log('@',pre,current)
 					return pre + (current.done ? 1 : 0)
 				},0) */
 				//简写
-				return this.todos.reduce((pre,todo) => pre + (todo.done ? 1 : 0), 0)
+				return this.todos.reduce((pre, todo)=> pre + (todo.done ? 1 : 0), 0)
 			},
 			//控制全选框
 			isAll: {
 				//全选框是否勾选
-				get() {
+				get(){
 					return this.doneTotal === this.total && this.total > 0
 				},
 				//isAll被修改时set被调用

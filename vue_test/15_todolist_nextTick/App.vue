@@ -21,12 +21,12 @@
 		components: {MyHeader, MyList, MyFooter},
 		data() {
 			return {
-				// 由于todos是MyHeader组件和MyFooter组件都在使用，所以放在App中（状态提升）
+				//由于todos是MyHeader组件和MyFooter组件都在使用，所以放在App中（状态提升）
 				todos:JSON.parse(localStorage.getItem('todos')) || []
 			}
 		},
 		methods: {
-			// 添加一个todo
+			//添加一个todo
 			addTodo(todoObj) {
 				this.todos.unshift(todoObj)
 			},
@@ -48,12 +48,12 @@
 			},
 			//全选or取消全选
 			checkAllTodo(done) {
-				this.todos.forEach((todo)=>{
+				this.todos.forEach((todo) => {
 					todo.done = done
 				})
 			},
 			//清除所有已经完成的todo
-			clearAllTodo(){
+			clearAllTodo() {
 				this.todos = this.todos.filter((todo) => {
 					return !todo.done
 				})

@@ -32,19 +32,19 @@
 				this.$bus.$emit('checkTodo', id)
 			},
 			//删除
-			handleDelete(id) {
-				if(confirm('确定删除吗？')) {
+			handleDelete(id){
+				if(confirm('确定删除吗？')){
 					//通知App组件将对应的todo对象删除
 					// this.deleteTodo(id)
-					// this.$bus.$emit('deleteTodo',id)
-					pubsub.publish('deleteTodo',id)
+					// this.$bus.$emit('deleteTodo', id)
+					pubsub.publish('deleteTodo', id)
 				}
 			},
 			//编辑
 			handleEdit(todo) {
 				if(todo.hasOwnProperty('isEdit')) {
 					todo.isEdit = true
-				} else {
+				}else{
 					// console.log('@')
 					this.$set(todo, 'isEdit', true)
 				}
@@ -58,7 +58,7 @@
 				if(!e.target.value.trim()) return alert('输入不能为空！')
 				this.$bus.$emit('updateTodo', todo.id, e.target.value)
 			}
-		}
+		},
 	}
 </script>
 
