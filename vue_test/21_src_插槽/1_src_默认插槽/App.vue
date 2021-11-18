@@ -6,7 +6,7 @@
 
 		<Category title="游戏" >
 			<ul>
-				<li v-for="(g,index) in games" :key="index">{{g}}</li>
+				<li v-for="(g, index) in games" :key="index">{{g}}</li>
 			</ul>
 		</Category>
 
@@ -32,7 +32,7 @@
 </script>
 
 <style scoped>
-	.container {
+	.container{
 		display: flex;
 		justify-content: space-around;
 	}
