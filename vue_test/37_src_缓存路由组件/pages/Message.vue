@@ -37,7 +37,7 @@
 			}
 		},
 		methods: {
-			pushShow(m){
+			pushShow(m) {
 				this.$router.push({
 					name: 'xiangqing',
 					query: {
@@ -46,7 +46,7 @@
 					}
 				})
 			},
-			replaceShow(m) {
+			replaceShow(m){
 				this.$router.replace({
 					name: 'xiangqing',
 					query: {
@@ -57,7 +57,7 @@
 			}
 		},
 		beforeDestroy() {
-			// console.log('Message组件即将被销毁了')
+			console.log('Message组件即将被销毁了')
 		}
 	}
 </script>
