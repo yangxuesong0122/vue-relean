@@ -7,7 +7,7 @@
 
 				<!-- 跳转路由并携带params参数，to的对象写法 -->
 				<router-link :to="{
-					name: 'xiangqing',
+					name:'xiangqing',
 					query: {
 						id: m.id,
 						title: m.title
@@ -46,7 +46,7 @@
 					}
 				})
 			},
-			replaceShow(m){
+			replaceShow(m) {
 				this.$router.replace({
 					name: 'xiangqing',
 					query: {
@@ -55,9 +55,6 @@
 					}
 				})
 			}
-		},
-		beforeDestroy() {
-			console.log('Message组件即将被销毁了')
 		}
 	}
 </script>
