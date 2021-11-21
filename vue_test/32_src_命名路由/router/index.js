@@ -18,10 +18,10 @@ export default new VueRouter({
 		{
 			path: '/home',
 			component: Home,
-			children: [
+			children:[
 				{
 					path: 'news',
-					component: News,
+					component: News
 				},
 				{
 					path: 'message',
@@ -29,7 +29,7 @@ export default new VueRouter({
 					children: [
 						{
 							name: 'xiangqing',
-							path: 'detail/:id/:title',
+							path: 'detail',
 							component: Detail
 						}
 					]
