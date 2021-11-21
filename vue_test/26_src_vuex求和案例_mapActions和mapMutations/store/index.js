@@ -9,7 +9,7 @@ Vue.use(Vuex)
 const actions = {
 	/* jia(context, value) {
 		console.log('actions中的jia被调用了')
-		context.commit('JIA', value)
+		context.commit('JIA',value)
 	},
 	jian(context, value) {
 		console.log('actions中的jian被调用了')
@@ -17,7 +17,7 @@ const actions = {
 	}, */
 	jiaOdd(context, value) {
 		console.log('actions中的jiaOdd被调用了')
-		if(context.state.sum % 2){
+		if(context.state.sum % 2) {
 			context.commit('JIA', value)
 		}
 	},
@@ -28,7 +28,7 @@ const actions = {
 		},500)
 	}
 }
-//准备mutations——用于操作数据（state）
+// 准备mutations——用于操作数据（state）
 const mutations = {
 	JIA(state, value) {
 		console.log('mutations中的JIA被调用了')
@@ -37,22 +37,15 @@ const mutations = {
 	JIAN(state, value) {
 		console.log('mutations中的JIAN被调用了')
 		state.sum -= value
-	},
-	ADD_PERSON(state, value){
-		console.log('mutations中的ADD_PERSON被调用了')
-		state.personList.unshift(value)
 	}
 }
 //准备state——用于存储数据
 const state = {
 	sum: 0, //当前的和
 	school: '河津中学',
-	subject: '前端',
-	personList: [
-		{id: '001', name: '张三'}
-	]
+	subject: '前端'
 }
-//准备getters——用于将state中的数据进行加工
+// 准备getters——用于将state中的数据进行加工
 const getters = {
 	bigSum(state) {
 		return state.sum * 10
