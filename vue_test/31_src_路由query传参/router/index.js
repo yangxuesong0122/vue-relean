@@ -9,16 +9,15 @@ import Detail from '../pages/Detail'
 
 //创建并暴露一个路由器
 export default new VueRouter({
-	routes:[
+	routes: [
 		{
-			name: 'guanyu',
 			path: '/about',
 			component: About
 		},
 		{
 			path: '/home',
 			component: Home,
-			children:[
+			children: [
 				{
 					path: 'news',
 					component: News
@@ -28,7 +27,6 @@ export default new VueRouter({
 					component: Message,
 					children: [
 						{
-							name: 'xiangqing',
 							path: 'detail',
 							component: Detail
 						}
