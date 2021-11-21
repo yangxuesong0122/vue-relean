@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<h1>当前求和为：{{$store.state.sum}}</h1>
-		<h3>当前求和放大10倍为：{{$store.getters.bigSum}}</h3>
 		<select v-model.number="n">
 			<option value="1">1</option>
 			<option value="2">2</option>
@@ -29,15 +28,15 @@
 			decrement() {
 				this.$store.commit('JIAN', this.n)
 			},
-			incrementOdd() {
+			incrementOdd(){
 				this.$store.dispatch('jiaOdd', this.n)
 			},
-			incrementWait() {
+			incrementWait(){
 				this.$store.dispatch('jiaWait', this.n)
-			},
+			}
 		},
 		mounted() {
-			console.log('Count', this.$store)
+			console.log('Count', this)
 		}
 	}
 </script>
