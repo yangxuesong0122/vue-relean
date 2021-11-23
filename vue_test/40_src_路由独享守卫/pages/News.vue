@@ -9,7 +9,7 @@
 
 <script>
 	export default {
-		name: 'News',
+		name:'News',
 		data() {
 			return {
 				opacity: 1
@@ -19,7 +19,7 @@
 			console.log('News组件即将被销毁了')
 			clearInterval(this.timer)
 		}, */
-		/* mounted() {
+		/* mounted(){
 			this.timer = setInterval(() => {
 				console.log('@')
 				this.opacity -= 0.01
