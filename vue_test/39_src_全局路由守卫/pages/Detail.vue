@@ -10,10 +10,10 @@
 		name: 'Detail',
 		props: ['id', 'title'],
 		computed: {
-			// id(){
+			// id() {
 			// 	return this.$route.query.id
 			// },
-			// title(){
+			// title() {
 			// 	return this.$route.query.title
 			// },
 		},

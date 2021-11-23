@@ -23,6 +23,6 @@
 			test(){
 				this.$router.go(3)
 			}
-		}
+		},
 	}
 </script>

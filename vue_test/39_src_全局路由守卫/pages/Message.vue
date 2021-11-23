@@ -26,10 +26,10 @@
 
 <script>
 	export default {
-		name: 'Message',
+		name:'Message',
 		data() {
 			return {
-				messageList: [
+				messageList:[
 					{id: '001', title: '消息001'},
 					{id: '002', title: '消息002'},
 					{id: '003', title: '消息003'}
@@ -46,7 +46,7 @@
 					}
 				})
 			},
-			replaceShow(m) {
+			replaceShow(m){
 				this.$router.replace({
 					name: 'xiangqing',
 					query: {
