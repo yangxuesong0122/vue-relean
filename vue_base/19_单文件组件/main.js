@@ -1,4 +1,4 @@
-import App from '../../vue_test/src/App.vue'
+import App from '../../vue_test/22_src_vue求和版本/App.vue'
 
 new Vue({
 	el: '#root',
